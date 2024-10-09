@@ -953,7 +953,7 @@ export class IonicSelectableComponent implements ControlValueAccessor, OnInit, D
       this._emitSearch();
     } else {
       // Default filtering.
-      let groups = [];
+      let groups: any[] = [];
 
       if (!this._searchText?.trim()) {
         groups = this._groups;
@@ -1126,7 +1126,8 @@ export class IonicSelectableComponent implements ControlValueAccessor, OnInit, D
 
   _setItemsToConfirm(items: any[]) {
     // Return a copy of original array, so it couldn't be changed from outside.
-    this._itemsToConfirm = [].concat(items);
+    let arr: any[] = [];
+    this._itemsToConfirm = arr.concat(items);
   }
 
   _doSelect(selectedItem: any) {
