@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, HostBinding, HostListener, ViewChild } from '@angular/core';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 import { IonContent, IonInfiniteScroll, IonSearchbar, NavParams, IonicModule } from '@ionic/angular';
 import { IonicSelectableComponent } from './ionic-selectable.component';
 import { FormsModule } from '@angular/forms';
@@ -8,7 +9,7 @@ import { NgIf, NgTemplateOutlet, NgFor, NgClass, NgStyle } from '@angular/common
     selector: 'ionic-selectable-modal',
     templateUrl: './ionic-selectable-modal.component.html',
     standalone: true,
-    imports: [IonicModule, NgIf, NgTemplateOutlet, FormsModule, NgFor, NgClass, NgStyle]
+    imports: [IonicModule, NgIf, NgTemplateOutlet, FormsModule, NgFor, NgClass, NgStyle, ScrollingModule]
 })
 export class IonicSelectableModalComponent implements AfterViewInit {
   @ViewChild(IonContent)

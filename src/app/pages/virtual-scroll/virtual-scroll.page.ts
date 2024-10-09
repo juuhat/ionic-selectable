@@ -21,6 +21,11 @@ export class VirtualScrollPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.ports = this.portService.getPorts();
+    this.ports = []
+    for (var i = 0; i < 10000; i++) {
+      var p = new Port({ id: i, name: "Port"+i, timeZone: 0})
+      this.ports.push(p)
+    }
+    //this.ports = this.portService.getPorts();
   }
 }
